@@ -2,16 +2,12 @@
 from django.shortcuts import render_to_response,redirect
 from django.views.decorators.csrf import csrf_protect
 from django.core.urlresolvers import reverse
-from django.http import HttpResponse, Http404
 from django.template import RequestContext
 
-from models import Applicant, Event
 from forms import ApplicantForm
 
 def home(request):
   return redirect(reverse('usstvol.views.apply'))
-  pass
-
 
 @csrf_protect
 def apply(request):
